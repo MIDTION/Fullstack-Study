@@ -1,0 +1,94 @@
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include "DHT.h"
+
+// ---------------- CONFIG ----------------
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+#define DHTPIN 17
+#define DHTTYPE DHT11
+// ----------------------------------------
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println("SSD1306 allocation failed!");
+    while(true);
+  }
+
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("DHT11 + OLED Ready");
+  display.display();
+  delay(2000);
+}
+
+void loop() {
+  delay(2000);
+
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  float f = dht.readTemperature(true);
+
+  // *** แก้ไขจุดนี้ ***
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    display.clearDisplay();
+    display.setCursor(0,0);
+    display.println("Sensor Error!");
+    display.display();
+    return;
+  }
+
+  // ----------------- แสดงค่า DHT11 -----------------
+  display.clearDisplay();
+  display.setTextSize(1);
+
+  display.setCursor(0,0);
+  display.print("H: ");
+  display.print(h);
+  display.println(" %");
+
+  display.setCursor(0,15);
+  display.print("T: ");
+  display.print(t);
+  display.println(" C");
+
+  display.setCursor(0,30);
+  display.print("F: ");
+  display.print(f);
+  display.println(" F");
+
+  // ----------------- วาดรูป -----------------
+
+  // วงกลม (กลางจอ)
+  display.drawCircle(95, 14, 10, WHITE);
+
+  // สามเหลี่ยม
+  display.drawTriangle(45, 58, 75, 58, 60, 45, WHITE);
+
+  // สี่เหลี่ยม
+  display.drawRect(5, 45, 30, 15, WHITE);
+
+  // ดาว 6 แฉก (David Star)
+  display.drawTriangle(95, 35, 105, 53, 85, 53, WHITE); // ล่าง
+  display.drawTriangle(95, 58, 85, 40, 105, 40, WHITE); // บน
+   // Serial Monitor
+  Serial.print("Humidity: ");
+  Serial.print(h);
+  Serial.print(" %  Temp: ");
+  Serial.print(t);
+  Serial.print(" C  ");
+  Serial.print(f);
+  Serial.println("F");
+
+  display.display();
+}

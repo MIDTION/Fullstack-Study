@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>respon</title>
+    
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*#mainBox {
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        @media (max-width: 1250px) {
+            #mainBox {
+                background-color: blue;
+            }
+        }*/
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        #blogContent {
+            padding: 2em;
+        }
+        @media (min-width: 800px) and (max-width: 1200px){
+            #blogContent {
+                padding-left: 20em;   /* or max-width 80vw */
+                padding-right: 20em;
+            }
+        }
+        @media (min-width: 1200px){
+            #blogContent {
+                max-width: 40vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="blogContent">
+        <h1>ปลา</h1>
+
+        <p>
+            ปลา จัดอยู่ในไฟลัมสัตว์มีกระดูกสันหลัง เป็นสัตว์ที่อาศัยอยู่ในแหล่งน้ำ เป็นสัตว์เลือดเย็น
+            หายใจด้วยเหงือกและมีกระดูกสันหลัง สามารถเคลื่อนไหวไปมาด้วยครีบและกล้ามเนื้อของลำตัว
+            บางชนิดมีเกล็ดปกคลุมทั่วตัว
+            บางชนิดไม่มีเกล็ดแต่ปกคลุมด้วยเมือกลื่น ๆ หรือแผ่นกระดูก มีหัวใจสองห้องและมีขากรรไกร
+        </p>
+        <p>
+            สัตว์ที่อาศัยอยู่ในแหล่งน้ำบางประเภท ถูกเรียกติดปากว่าปลาเช่นเดียวกันเช่น ปลาดาว, โลมา, วาฬและหมึก
+            ซึ่งสัตว์ทั้งหมดนี้ก็มีแหล่งอาศัยอยู่ในน้ำด้วยกันทั้งสิ้น แต่ไม่ได้จัดอยู่ในจำพวกเดียวกันกับปลา
+            ด้วยลักษณะทางกายวิภาคและสรีรวิทยาที่แตกต่างกันเช่น ปลาดาวเป็นสัตว์ที่ไม่มีกระดูกสันหลังเช่นเดียวกับปลา
+            มีโครงสร้างที่เป็นหินปูน โลมาและวาฬถูกจัดเป็นสัตว์เลี้ยงลูกด้วยนมที่สามารถหายใจได้ทางปอดไม่ใช่ทางเหงือก
+            และปลาหมึกจัดเป็นสัตว์ที่ไม่มีกระดูกสันหลัง แต่ถูกจัดรวมอยู่กับสัตว์ประเภทเดียวกันกับหอย
+        </p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+#div1 {
+    background-color: red;
+}
+
+#div2 {
+    background-color: blue;
+}
+.text {
+    color: white;
+}
+
+div {
+    color: blue/*เลือกแท็ก div ทุกอัน*/
+}
+
+* {
+    font-size: 100px;
+}
+
+div p {
+    color: red;
+}

@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1764957078546-35495d3d2cbb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    animation: gradainBG 15s ease infinite;
+    overflow: hidden;
+    color: white;
+   font-family: sans-serif;
+}
+@keyframes gradainBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    background-color: rgb(65, 6, 16);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    
+    #logo{
+        padding: 15px;
+        color: rgb(10, 215, 241);
+    }
+    #bar{
+        display: flex;
+        gap: 80px;
+        position: relative;
+        padding: 15px;
+        
+    }
+    .slide{
+        size: 10px;
+        text-decoration: none;
+        color: white;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 32px -3px rgba(216, 26, 26, 0.59);
+        
+    }
+}
+

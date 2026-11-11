@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myhistory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(132, 199, 231);
+            padding: 2em;
+            max-width: 100%;
+            font-family: "Bai Jamjuree", sans-serif;
+            font-weight: 500;
+
+            display: block;
+
+        }
+
+        main {
+            max-width: 900px;
+            width: 100%;
+            margin: auto;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            column-gap: 2em;
+            background-color: rgb(223, 194, 158);
+            padding: 2em;
+            border-radius: 5px;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        h1 {
+            display: grid;
+        }
+
+        h1,
+        h2 {
+            grid-column: span 2;
+            margin: 1;
+        }
+
+        #top {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(221, 207, 105);
+            padding: 2em;
+            border-radius: 15px;
+            border: 1px solid black;
+            max-width: 1200px;
+        }
+
+        #bod {
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(221, 207, 105);
+            padding: 2em;
+            border-radius: 15px;
+            border: 1px solid black;
+            max-width: 1200px;
+        }
+
+        #photo {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(221, 207, 105);
+            padding: 2em;
+            border-radius: 15px;
+            border: 1px solid black;
+            max-width: 1200px;
+        }
+
+        #food {
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(221, 207, 105);
+            padding: 2em;
+            border-radius: 15px;
+            border: 1px solid black;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .favfood {
+            img {
+                margin-top: 10px;
+                width: 200px;
+            }
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        @media (max-width: 1000px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 1.5em;
+            }
+
+            h1,
+            h2 {
+                grid-column: span 1;
+            }
+
+            #top,
+            #bod,
+            #photo,
+            #food {
+                padding: 1.5em;
+                margin-bottom: 1em;
+            }
+
+            .favfood img {
+                width: 180px;
+            }
+
+            footer {
+                padding: 12px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1em;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                padding: 1em;
+                gap: 1em;
+            }
+
+            h1,
+            h2 {
+                font-size: 1.5em;
+                text-align: center;
+            }
+
+            #top img {
+                width: 80%;
+                border-radius: 10px;
+            }
+
+            .favfood img {
+                width: 150px;
+            }
+
+            ul {
+                padding-left: 1em;
+            }
+
+            footer {
+                padding: 14px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            main {
+                padding: 0.5em;
+            }
+
+            h1,
+            h2 {
+                font-size: 1.1em;
+                text-align: center;
+            }
+
+            #top img {
+                width: 75%;
+                margin: auto;
+                display: block;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .favfood img {
+                width: 120px;
+            }
+
+            footer {
+                font-size: 0.8em;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="top">
+            <h1>Myhistory</h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEqnaSqJBDg2HDF0vMepBCLRYoILE-HIFFQ&s" />
+        </section>
+        <section id="bod">
+            <h2>ประวัติส่วนตัว</h2>
+            <div>
+                <!--ชื่อและประวัติสมมติ-->
+                <strong>ชื่อ : Midtion</strong>
+            </div>
+            <div>
+                <p>ที่อยู่ : บ้านเลขที่ 198 หมู่ที่11 ต.มาจิตะ อ.มาจินะ จ.อิเซไก</p>
+            </div>
+            <div>
+                <p>วันเดือนปีเกิด : วันที่ 25 ธันวาคม พ.ศ.2548</p>
+            </div>
+            <div>
+                <!--ทดสอบใช้ ฟังก์ชันหลายๆอย่าง-->
+                <span>โทรศัพท์: </span>
+                <span>0987294984</span>
+                <span>Email: midtion.dev@gmail.com</span>
+            </div>
+            <div>
+                <p>กำลังศึกษาอยู่ที่: KMITL ชั้นปีที่2</p>
+                <p>สาขา: วิศวกรรมคอมพิวเตอร์</p>
+            </div>
+        </section>
+        <section id="photo">
+            <h2>ภาพที่ชอบ</h2>
+            <img
+                src="https://images.unsplash.com/photo-1762170905134-e9e3b5692286?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=400" />
+        </section>
+        <section id="food">
+            <h2>อาหารที่ชอบ</h2>
+            <ul>
+                <div class="favfood">
+                    <li>หมูย่าง</li>
+                    <img
+                        src="https://ketadisak2.wordpress.com/wp-content/uploads/2015/09/1403016451-2010050310-o.jpg" />
+                </div>
+                <div class="favfood">
+                    <li>ลาบหมู</li>
+                    <img src="https://www.sgethai.com/wp-content/uploads/2022/08/Image10-2.webp" />
+                </div>
+                <div class="favfood">
+                    <li>ต้มยำเครื่องในหมู</li>
+                    <img src="https://assets.unileversolutions.com/recipes-v2/117750.jpg" />
+                </div>
+
+            </ul>
+        </section>
+    </main>
+    <h3>โปรดช่วย comment หน่อยน่าา</h3>
+    <header>
+        <nav>
+            <a href="commentCSS.html" target="_blank">คลิกที่นี่เพื่อcomment</a>
+        </nav>
+    </header>
+
+    <footer style="text-align:center; padding:10px; background:#222; color:#aaa;">
+        <p>© 2025 MIDTION | Computer Engineering Student</p>
+    </footer>
+
+</body>
+
+</html>

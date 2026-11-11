@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(212, 195, 226);
+            padding: 2em;
+            font-family: sans-serif;
+
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5em;
+            column-gap: 1em;
+            background: rgb(181, 239, 173);
+            padding: 2em;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            background: rgb(92, 222, 75);
+            padding: 0.6em;
+            border-radius: 10px;
+            border: 1px solid #000000;
+            max-width: 300px;
+            max-height: 150px;
+            
+            
+        }       
+
+        h1,
+        h2 {
+            grid-column: span 2;
+            margin: 0;
+        }
+
+        input,
+        textarea,
+        select {
+            margin-top: 4px;
+            padding: 0.5em;
+            border-radius: 10px;
+            border: 1px solid #000000;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+        }
+
+        .check {
+            display: flex;
+            gap: 1em;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .area {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 800px) {
+            form {
+                grid-template-columns: 1fr;
+                padding: 1.5em;
+            }
+
+            h1,h2,button,.area {
+                grid-column: span 1;
+            }
+
+            .check {
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: 450px) {
+            form {
+                padding: 1em;
+            }
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <h1>แนะนำตัวคุณ</h1>
+        <label>
+            <!--ต้องใส่ประวัติให้ครบถ้วน-->
+            ชื่อ-สกุล
+            <input name="username" type="text" placeholder="สมชาย ชายไม่สม" required />
+        </label>
+        <label>
+            ชื่อเล่น
+            <input name="nickname" type="text" placeholder="สมชาย" required />
+        </label>
+        <label>
+            อีเมล
+            <input name="email" type="email" placeholder="Somchai191@gmail.com" required />
+        </label>
+        <h2>เป็นคนไทยใช่หรือไม่</h2>
+        <div class="check">
+            <label>
+                <input name="YESorNO" value="YES" type="radio" />
+                ใช่
+            </label>
+            <label>
+                <input name="YESorNO" value="NO" type="radio" />
+                ไม่
+            </label>
+        </div>
+        <h2>คุณเป็นคนภาคไหน</h2>
+        <label class="area">
+            <select name="province">
+                <option selected>เลือกภาคของคุณ</option>
+                <optgroup label="โปรดเลือก">
+                    <option value="N">ภาคเหนือ</option>
+                    <option value="NE">ภาคตะวันออกเฉียงเหนือ</option>
+                    <option value="C">ภาคกลาง</option>
+                    <option value="S">ภาคใต้</option>
+                </optgroup>
+            </select>
+        </label>
+        <h2>ระดับความชื่นชอบในผลงานของฉัน</h2>
+        <div class="check">
+            <label>
+                <input name="level" value="verylike" type="checkbox" />
+                ชอบมาก
+            </label>
+            <label>
+                <input name="level" value="like" type="checkbox" />
+                ชอบ
+            </label>
+            <label>
+                <input name="level" value="moderate" type="checkbox" />
+                ปานกลาง
+            </label>
+            <label>
+                <input name="level" value="dislike" type="checkbox" />
+                ไม่ชอบ
+            </label>
+        </div>
+        <h2>comment เพิ่มเติม</h2>
+        <label class="area">
+            <textarea name="comment" placeholder="เขียนในช่องว่าง"></textarea>
+        </label>
+        <div class="check">
+            <br />
+            <!--ต้องยอมรับ-->
+            <input type="checkbox" required />
+            ยอมรับข้อตรงลงและเงื่อนการใช้งาน
+        </div>
+        <br />
+        <button type="submit">ยืนยัน</button>
+    </form>
+    <header>
+        <nav>
+            <br />
+            <a href="ProjectCSS.html" target="_blank">คลิกที่นี่เพื่อกลับสู่หน้าหลัก</a>
+        </nav>
+    </header>
+</body>
+
+</html>

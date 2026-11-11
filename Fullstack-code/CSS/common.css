@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+.widthHeight {
+    height: 100px;
+    width: 200px;
+    /*background-color: #2cb514;*/
+    background-image: url('https://images.unsplash.com/photo-1761960084255-7b45bd632251?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1172');
+    background-size: cover;
+    color: rgb(0, 255, 0);
+
+    border-color: red;  /*กรอบ*/
+    border-width: 10px;
+    border-style: solid;
+
+    margin-top: 50px; /*วางตำแหน่ง*/
+    margin-left: 20px;
+ 
+    padding-top: 20px; /* วางตำแหน่งข้อความในกล่อง */
+    padding-left: 20px;
+
+    box-shadow: -30px 4px 46px -2px rgba(117, 143, 56, 0.69); /*แสงเงา*/
+
+}
+
+#block1, #block2 {   /*ทำให้ div อยู่บรรทัดเดียวกันได้*/
+    display: inline;
+}
+
+#span1, #span2 {   /*ทำให้ span อยู่คนละบรรทัด*/
+    display: block;
+}
+
+label {
+    display: block;
+}

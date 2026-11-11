@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+<body>
+    <form>
+        <h2>แนะนำตัวคุณ</h2>
+        <label>
+            <!--ต้องใส่ประวัติให้ครบถ้วน-->
+            ชื่อ-สกุล
+            <input name="username" type="text" placeholder="สมชาย ชายไม่สม" required/>
+        </label>
+        <label>
+            ชื่อเล่น
+            <input name="nickname" type="text" placeholder="สมชาย" required/>
+        </label>
+        <label>
+            อีเมล
+            <input name="email" type="email" placeholder="Somchai191@gmail.com" required/>
+        </label>
+        <h2>เป็นคนไทยใช่หรือไม่</h2>
+        <label>
+            <input name="YESorNO" value="YES" type="radio"/>
+            ใช่
+        </label>
+        <label>
+            <input name="YESorNO" value="NO" type="radio"/>
+            ไม่
+        </label>
+        <h2>คุณเป็นคนภาคไหน</h2>
+        <select name="province" >
+            <option selected>เลือกภาคของคุณ</option>
+            <optgroup label="โปรดเลือก">
+                <option value="N">ภาคเหนือ</option>
+                <option value="NE">ภาคตะวันออกเฉียงเหนือ</option>
+                <option value="C">ภาคกลาง</option>
+                <option value="S">ภาคใต้</option>
+            </optgroup>
+        </select>
+        <h2>ระดับความชื่นชอบในผลงานของฉัน</h2>
+        <label>
+            <input name="level" value="verylike" type="checkbox" />
+            ชอบมาก
+        </label>
+        <label>
+            <input name="level" value="like" type="checkbox" />
+            ชอบ
+        </label>
+        <label>
+            <input name="level" value="moderate" type="checkbox" />
+            ปานกลาง
+        </label>
+        <label>
+            <input name="level" value="dislike" type="checkbox" />
+            ไม่ชอบ
+        </label>
+        <h2>comment เพิ่มเติม</h2>
+        <label>
+            <textarea name="comment" placeholder="เขียนในช่องว่าง"></textarea>
+        </label>
+        <div>
+            <br />
+            <!--ต้องยอมรับ-->
+            <input type="checkbox" required/>
+            ยอมรับข้อตรงลงและเงื่อนการใช้งาน
+        </div>
+        <br />
+        <button type="submit">ยืนยัน</button>
+    </form>
+    <header>
+        <nav>
+            <br />
+            <a href="ProjectHTML.html" target="_blank">คลิกที่นี่เพื่อกลับสู่หน้าหลัก</a> 
+        </nav>
+    </header>
+</body>
+</html>

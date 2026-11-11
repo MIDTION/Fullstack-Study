@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <label>
+            ชื่อผู้ใช้
+            <input name="username" type="text" placeholder="kyutaro"/>
+        </label>
+        <label>
+            รหัสผ่าน 
+            <input name="password" type="password" placeholder="your password"/>
+        </label>
+        <label>
+            อีเมล
+            <input name="email" type="email" placeholder="kyutaro@gmail.com"/>
+        </label>
+
+        <h2>อาหารที่ชอบ</h2>
+        <label>
+            <input name="favoritefood" value="Roast Pork" type="checkbox"/>
+            หมูย่าง
+        </label>
+        <label>
+            <input name="favoritefood" value="Pork Larb" type="checkbox" checked/> 
+            ลาบหมู
+        </label>
+        <label>
+            <input name="favoritefood" value="rotisserie chicken" type="checkbox"/>
+            ไก่หมุน
+        </label>
+        <label>
+            <input name="favoritefood" value="Tomyarm" type="checkbox"/>
+            ต้มยำ
+        </label>
+
+        <h2>ใช่หรือไม่</h2>
+        <label>
+            <input name="YESorNO" value="YES" type="radio"/>
+            ใช่
+        </label>
+        <label>
+            <input name="YESorNO" value="MAYBE" type="radio"/>
+            อาจจะ
+        </label>
+        <label>
+            <input name="YESorNO" value="NO" type="radio"/>
+            ไม่
+        </label>
+
+        <h2>จังหวัด</h2>
+        <select name="province">
+            <option selected>เลือกจังหวัด</option>
+            <optgroup label="ภาคเหนือ">
+                <option value="CMI">เชียงใหม่</option>
+                <option value="CRI">เชียงราย</option>
+                <option value="LPG">ลำปาง</option>
+            </optgroup>
+            <optgroup label="ภาคตะวันออกเฉียงเหนือ">
+                <option value="KKN">ขอนแก่น</option>
+                <option value="KBI">ร้อยเอ็ด</option>
+                <option value="NPM">นครพนม</option>
+            </optgroup>
+            <optgroup label="ภาคกลาง">
+                <option value="BKK">กรุงเทพมหานคร</option>
+                <option value="NSN">นครสวรรค์</option>
+                <option value="NPT">นครปฐม</option>
+            </optgroup>
+            <optgroup label="ภาคใต้">
+                <option value="KBI">กระบี่</option>
+                <option value="PKT">ภูเก็ต</option>
+                <option value="CPN">ชุมพร</option>
+            </optgroup>
+        </select>
+
+        <label>
+            <textarea name="comment">
+
+            </textarea>
+        </label>
+
+        <label>
+            <input type="checkbox" required/>
+            ยอมรับข้อตรงลงและเงื่อนการใช้งาน
+        </label>
+
+        <button type="submit">ส่งฟอร์ม</button>
+    </form>
+</body>
+</html>

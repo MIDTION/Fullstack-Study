@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .cardContainer{
+            display: flex;
+            justify-content: space-between;
+        }
+        .newsThumnail{
+            width: 100px;
+        }
+        .card{
+            border-color: red;  /*กรอบ*/
+            border-width: 1px;
+            border-style: solid;
+        }
+        #centerContainer{
+            border: 1px solid red;
+            width: 600px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #centerElement{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Breaking news</h2>
+
+        <section class="cardContainer">
+            <div class="card">
+            <h3>Breaking news 1!</h3>
+            <p>
+                Very important news! Must read!
+            </p>
+        </div>
+        <div class="card">
+            <img class="newsThumnail" src="https://images.unsplash.com/photo-1734526040622-a3e96b679f80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+            <h3>Breaking news 2!</h3>
+            <p>
+                Very important news! Must read!
+            </p>
+        </div>
+        <div class="card">
+            <h3>Breaking news 3!</h3>
+            <p>
+                Very important news! Must read!
+            </p>
+        </div>
+        </section>
+        
+    </section>
+    <div id="centerContainer">
+        <div id="centerElement">ลูก</div>
+    </div>
+</body>
+</html>
